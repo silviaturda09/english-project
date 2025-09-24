@@ -1,0 +1,115 @@
+/* Șterge toate spațiile default ale browserului */
+* {
+    margin: 0; /* Fără spații în afara cutiei */
+    padding: 0; /* Fără spații în interiorul cutiei */
+    box-sizing: border-box; /* Calculează dimensiunea cu tot cu bordurile */
+}
+/* Cum arata pagina*/
+body {
+    font-family: Georgia, serif; /* Font elegant cu coadițe */
+    line-height: 1.6; /* Spațiu între rânduri (nu prea înghesuit) */
+    color: #333; /* Text gri închis */
+}
+/* Cutia mare pentru poza din header */
+.header-banner {
+    position: relative; /* Permite să pui lucruri peste ea */
+    width: 100%; /* Ocupă toată lățimea */
+    height: 300px; /* Înălțime fixă */
+    overflow: hidden; /* Ascunde ce iese din cutie */
+}
+/* Poza din header */
+.header-img {
+    width: 100%; /* Poza ocupă toată cutia pe lățime */
+    height: 100%; /* Poza ocupă toată cutia pe înălțime */
+    object-fit: cover; /* Poza nu se deformează, dar se taie dacă e nevoie */
+    display: block;  /* Elimină spațiul ciudat de sub poze */
+}
+/* Textul care stă peste poza din header */
+.header-text {
+    position: absolute; /* Stă peste poză */
+    top: 50%; /* La jumătatea de sus */
+    left: 50%; /* La jumătatea din stânga */
+    transform: translate(-50%, -50%); /* Centrează perfect */
+    color: white; /* Text alb */
+    text-align: center; /* Text în mijloc */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.93); /* Umbră ca să se vadă textul */
+}
+/* Partea de sus a site-ului */
+header {
+    text-align: center; /* Tot în mijloc */
+    padding: 2rem; /* Spațiu în jurul textului */
+    color: white; /* Text alb */
+    position: relative;  /* Permite copiilor să stea peste */
+}
+/* Titlurile din header */
+header h1, header p {
+    position: relative; /* Stau normal în pozitia lor */
+    z-index: 2; /* Stau deasupra altor lucruri */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Umbră ca să se citească */
+    font-size: 2rem; /* Font mare section */
+    margin: 20px; /* Spațiu în jurul cutiei */
+    padding: 30px; /* Spațiu în interiorul cutiei */
+    border-radius: 15px;  /* Colțuri rotunjite */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Umbră subtilă */
+}
+/* Titlurile mari din cutii */
+section h2 {
+    color: #184458; /* Culoare coral/roz */
+    font-size: 1.8rem; /* Mai mare decât textul normal */
+    margin-bottom: 20px; /* Spațiu dedesubt */
+    border-bottom: 3px solid #082445;  /* Linie albastra dedesubt */
+    padding-bottom: 10px; /* Spațiu între text și linie */
+}
+/* Cutiile mici din interior (cardurile) */
+section div {
+    background: #d3edf5; /* Fundal bej deschis */
+    padding: 20px; /* Spațiu în interiorul cutiei mici */
+    margin: 15px 0;  /* Spațiu sus și jos între cutii */
+    border-radius: 10px; /* Colțuri rotunjite */
+    border-left:  5px solid #27208e;  /* Linie coral în stânga */
+}
+/* Titlurile mici din cutiile mici */
+section div h3 { 
+    color: #2b809c; /* Coral/roz */
+    margin-bottom: 10px; /* Spațiu dedesubt */
+    font-size: 1.3rem; /* Puțin mai mare decât normal */
+}
+/* Cutia care ține simbolurile într-un rând */
+.symbols-container {
+  display: flex; /* Pune lucrurile în linie */
+  gap: 30px; /* Spațiu între ele */
+  justify-content: center; /* Le pune în mijloc */
+  flex-wrap: wrap;  /* Dacă nu încap, trec pe rândul următor */
+  margin-top: 20px; /* Spațiu deasupra */
+}
+/* Fiecare cartonaș de simbol */
+.symbol-card {
+  background: #F5E6D3; /* Fundal bej */
+  border-radius: 12px;  /* Colțuri rotunjite */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Umbră ușoară */
+  padding: 16px 12px; /* Spațiu în interior */
+  width: 200px; /* Lățime fixă */
+  text-align: center; /* Tot în mijloc */
+  transition: transform 0.2s; /* Animație când faci ceva cu el */
+}
+/* Ce se întâmplă când pui mouse-ul peste cartonaș */
+.symbol-card:hover {
+  transform: translateY(-6px) scale(1.04); /* Se ridică și se mărește puțin */
+}
+/* Pozele mici rotunde din cartonașe */
+.symbol-img {
+  width: 80px; /* Lățime mică */
+  height: 80px; /* Înălțime mică */
+  object-fit: cover; /* Nu se deformează */
+  border-radius: 20%; /* Rotundă ca un cerc */
+  margin-bottom: 10px; /* Spațiu dedesubt */
+  border: 2px solid #FF7F7F; /* Contur coral */
+}
+
+footer {
+    background: linear-gradient(135deg, #076692 0%, #d3f2f5 100%);
+    text-align: center;
+    padding: 30px;
+    color: #333;
+    margin-top: 40px;
+}
