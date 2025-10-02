@@ -66,13 +66,50 @@ section div {
     padding: 20px; /* Spațiu în interiorul cutiei mici */
     margin: 15px 0;  /* Spațiu sus și jos între cutii */
     border-radius: 10px; /* Colțuri rotunjite */
-    border-left:  5px solid #27208e;  /* Linie coral în stânga */
+    border-left:  5px solid #204e8e;  /* Linie coral în stânga */
 }
 /* Titlurile mici din cutiile mici */
 section div h3 { 
     color: #2b809c; /* Coral/roz */
     margin-bottom: 10px; /* Spațiu dedesubt */
     font-size: 1.3rem; /* Puțin mai mare decât normal */
+}
+section div img {
+    width: 100%; /* Ocupa toata lasimea cardului */
+    max-width: 400px; /* Dar nu mai mare de 400px */
+    height: 150px; /* Înălțime fixă */
+    object-fit: cover;
+    object-position: center 70%;
+    border-radius: 8px; /* Colțuri rotunjite */
+    margin: 10px auto 15px auto; /* Spațiu deasupra și dedesubt, centrat */
+    display: block; /* Pentru centrare */
+}
+/* Butonul de înapoi */
+section div a {
+    display: inline-block;
+    background: #204e8e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 12px;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+section div p a {
+    color: #2b809c; /* Culoare albastru ca textul din h3 */
+    text-decoration: underline; /* Subliniază discret */
+    background: none; /* Fără fundal */
+    padding: 0; /* Fără padding */
+    border-radius: 0; /* Fără colțuri rotunjite */
+    transition: color 0.3s; /* Animație la hover */
+    font-weight: normal; /* Font normal ca restul textului */
+}
+
+section div a:hover {
+    background-color: #2b809c;
+    transform: translateY (-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0,2);
 }
 /* Cutia care ține simbolurile într-un rând */
 .symbols-container {
@@ -83,29 +120,38 @@ section div h3 {
   margin-top: 20px; /* Spațiu deasupra */
 }
 /* Fiecare cartonaș de simbol */
-.symbol-card {
-  background: #F5E6D3; /* Fundal bej */
+.symbol-card {  background: #076692; /* Fundal albastru */
   border-radius: 12px;  /* Colțuri rotunjite */
   box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Umbră ușoară */
   padding: 16px 12px; /* Spațiu în interior */
   width: 200px; /* Lățime fixă */
   text-align: center; /* Tot în mijloc */
   transition: transform 0.2s; /* Animație când faci ceva cu el */
+  color: white !important;
 }
-/* Ce se întâmplă când pui mouse-ul peste cartonaș */
-.symbol-card:hover {
-  transform: translateY(-6px) scale(1.04); /* Se ridică și se mărește puțin */
-}
-/* Pozele mici rotunde din cartonașe */
+/* Pozele mici din cartonașe */
 .symbol-img {
   width: 80px; /* Lățime mică */
   height: 80px; /* Înălțime mică */
   object-fit: cover; /* Nu se deformează */
   border-radius: 20%; /* Rotundă ca un cerc */
   margin-bottom: 10px; /* Spațiu dedesubt */
-  border: 2px solid #FF7F7F; /* Contur coral */
+  border: 2px solid #487da6; /* Contur coral */
 }
-
+section a [href="index.html"] {
+    display: inline-block;
+    background: #204e8e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+section a [href="index.html"]:hover {
+    background: #2b809c;
+    transform: translateY(-2px);
+}
 footer {
     background: linear-gradient(135deg, #076692 0%, #d3f2f5 100%);
     text-align: center;
