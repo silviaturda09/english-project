@@ -7,7 +7,7 @@
 /* Cum arata pagina*/
 body {
     font-family: Georgia, serif; /* Font elegant cu coadițe */
-    line-height: 1.6; /* Spațiu între rânduri (nu prea înghesuit) */
+    line-height: 1.5; /* Spațiu între rânduri (nu prea înghesuit) */
     color: #333; /* Text gri închis */
 }
 /* Cutia mare pentru poza din header */
@@ -74,6 +74,7 @@ section div h3 {
     margin-bottom: 10px; /* Spațiu dedesubt */
     font-size: 1.3rem; /* Puțin mai mare decât normal */
 }
+/* Poza din cutiile mici */
 section div img {
     width: 100%; /* Ocupa toata lasimea cardului */
     max-width: 400px; /* Dar nu mai mare de 400px */
@@ -86,18 +87,19 @@ section div img {
 }
 /* Butonul de înapoi */
 section div a {
-    display: inline-block;
-    background: #204e8e;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-top: 12px;
-    transition: all 0.3s;
-    font-weight: bold;
+    display: inline-block; /* Face linkul să se comporte ca un bloc, dar rămâne pe aceeași linie */
+    background: #204e8e; /* Culoare de fundal albastru închis */
+    color: white;  /* Culoarea textului din link - alb */
+    padding: 10px 20px; /* Spațiu interior: 10px sus/jos, 20px stânga/dreapta */
+    border-radius: 6px; /* Colțuri rotunjite de 6 pixeli */
+    text-decoration: none; /* Elimină sublinierea linkului */
+    margin-top: 12px; /* Spațiu de 12px deasupra butonului */
+    transition: all 0.3s; /* Animație lină de 0.3 secunde pentru toate schimbările */
+    font-weight: bold; /* Text îngroșat (bold) */
 }
-section div p a {
-    color: #2b809c; /* Culoare albastru ca textul din h3 */
+
+section div a {
+    color: #000000; /* Culoare albastru ca textul din h3 */
     text-decoration: underline; /* Subliniază discret */
     background: none; /* Fără fundal */
     padding: 0; /* Fără padding */
@@ -110,6 +112,25 @@ section div a:hover {
     background-color: #2b809c;
     transform: translateY (-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0,2);
+}
+
+/* Container pentru text și poză alături */
+.content-with-image {
+    display: flex; /* Pune copiii în linie */
+    gap: 20px; /* Spațiu între text și poză */
+    align-items: flex-start; /* Aliniază sus */
+}
+/* Poza din lateral */
+.content-with-image img {
+    width: 300px; /* Lățime fixă */
+    height: 200px; /* Înălțime fixă */
+    object-fit: cover; /* Nu se deformează */
+    border-radius: 8px; /* Colțuri rotunjite */
+    flex-shrink: 0; /* Nu se micșorează */
+}
+/* Textul din lateral */
+.text-content {
+    flex: 1; /* Ocupă restul spațiului */
 }
 /* Cutia care ține simbolurile într-un rând */
 .symbols-container {
@@ -140,17 +161,48 @@ section div a:hover {
 }
 section a [href="index.html"] {
     display: inline-block;
-    background: #204e8e;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-top: 20px;
-    transition: all 0.3s;
+    background: #204e8e; /* Culoarea de fundal albastru închis */
+    color: white;  /* Culoarea textului din link - alb */
+    padding: 10px 20px; /* Spațiu interior: 10px sus/jos, 20px stânga/dreapta */
+    border-radius: 6px; /* Colțuri rotunjite cu raza de 6 pixeli */
+    text-decoration: none; /* Elimină sublinierea implicită a link-ului */
+    margin-top: 20px; /* Spațiu exterior deasupra butonului de 20 pixeli */
+    transition: all 0.3s;/* Toate schimbările se fac gradual în 0.3 secunde  (util pentru efecte hover) */
 }
 section a [href="index.html"]:hover {
-    background: #2b809c;
-    transform: translateY(-2px);
+    background: #2b809c; /* Schimbă fundalul în albastru-turcoaz la hover */
+    transform: translateY(-2px); /* Mută elementul cu 2 pixeli în SUS pe axa Y (creează efect de "ridicare" a butonului) */
+}
+/* Selector de clasă: aplică stiluri pentru elemente cu class="famous-people" */
+.famous-people {
+    width: 100%; /* Lățimea este 100% din elementul părinte */
+    height: 300px; /* Înălțimea fixă de 300 pixeli */
+    object-fit: contain; /* Imaginea se va scala pentru a încăpea complet în zona de 300px, păstrând proporțiile (nu se deformează, nu se taie) */
+    object-position: center top; /* Poziționează imaginea centrat orizontal și sus vertical */
+    display: block; /* Elementul devine block (ia toată lățimea disponibilă,  începe pe linie nouă) */
+    border-radius: 20px; 
+    overflow: hidden;
+    
+}
+/*Link pentru video - arată ca un buton special */
+.video-link {
+    display: inline-block;
+    background: #0d347c; /* Albastru buton */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 15px 0;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(58, 99, 203, 0.3);
+}
+
+.video-link:hover {
+    background: #379ece;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 208, 255, 0.4);
 }
 footer {
     background: linear-gradient(135deg, #076692 0%, #d3f2f5 100%);
