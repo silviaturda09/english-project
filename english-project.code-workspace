@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../english project/soundfile"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "english-project"
+	}
+}
